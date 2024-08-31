@@ -1,0 +1,17 @@
+
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: water_gas_api
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
